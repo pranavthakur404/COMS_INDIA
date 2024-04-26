@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* About page css */
+.gallarymainBox {
+  overflow: hidden;
+}
+.gallarymainBox .overlay {
+  opacity: 0;
+  transition-duration: 0.5s;
+}
+.gallarymainBox .content {
+  bottom: -100px;
+  transition-duration: 0.5s;
+}
+.gallarymainBox:hover .overlay {
+  opacity: 1;
+}
+.gallarymainBox:hover .content {
+  bottom: 20px;
+}
+
+/* ================ Gllary page ================ */
+.gallary-main-section {
+  display: grid;
+  grid-template-columns: 31% 31% 31%;
+  justify-content: space-between;
+  row-gap: 50px;
+}
+
+/* ================== Teams page ============ */
+.teams-main-section {
+  display: grid;
+  grid-template-columns: 31% 31% 31%;
+  justify-content: space-between;
+  row-gap: 50px;
+  overflow: hidden;
+}
+
+.teams-content {
+  transition: all 0.6s ease 0s;
+}
+
+.teams-founder-image {
+  position: relative;
+  transition: all 0.6s ease 0s;
+}
+
+.teams-founder-image::after {
+  content: "dfdfd";
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+
+/* ================ Service section ============ */
+.service-main-section {
+  display: grid;
+  grid-template-columns: 31% 31% 31%;
+  justify-content: space-between;
+  row-gap: 50px;
+}
+
+/* ================ Carrer main section ========= */
+.carrer-main-section {
+  display: grid;
+  grid-template-columns: 31% 31% 31%;
+  justify-content: space-between;
+  row-gap: 50px;
+}
+
+/* ================ Header===================== */
+.mega-menu-item {
+  transition: all 0.3s ease 0s;
+  max-height: fit-content;
+  overflow: hidden;
+  padding: 10px;
+  top: 60px;
+  opacity: 0;
+  visibility: hidden;
+}
+.maga-menu-nav:hover > .mega-menu-item {
+  top: 40px;
+  opacity: 1;
+  visibility: visible;
+}
+.maga-menu-nav:hover > .mega-menu-item li a {
+  transition: all 0.3s ease 0s;
+}
+.maga-menu-nav:hover > .mega-menu-item li a:hover {
+  color: red;
+}
+
+/* =================== Mobile menu css ============= */
+.mobile-menu-item {
+  transition: all 0.3s ease 0s;
+  max-height: 0px;
+  padding: 0;
+  overflow: hidden;
+}
+
+.mobile-menu-item.active {
+  max-height: max-content;
+  padding: 10px;
+  overflow: hidden;
+}
+
+/* ============== Media query ================== */
+
+@media (max-width: 767px) {
+  .gallary-main-section,
+  .service-main-section,
+  .carrer-main-section,
+  .teams-main-section {
+    display: grid;
+    grid-template-columns: 49% 49%;
+  }
+}
+
+@media (max-width: 560px) {
+  .contact-details-box-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .contact-details-box-container > .box {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 460px) {
+  .gallary-main-section,
+  .service-main-section,
+  .carrer-main-section,
+  .teams-main-section {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+}
+
+/* =============== Card css ================ */
+.card-box:hover .card-img {
+  transition: 0.5s;
+}
+.card-box:hover .card-img {
+  transform: scale(1.5);
+}
